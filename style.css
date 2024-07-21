@@ -1,0 +1,177 @@
+/* Por padrão o navegador já coloca espaço entre as tags
+Quando ja tem uma medida precisamos "resetar" as medidas do navegador, fazendo um ajuste, com o seletor universal
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --fundo-: url(/img/Background.png);
+  --stroke-color: rgba(255, 255, 255, 0.5;);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(225, 225, 225, 0.05);
+  --switch-bg-url: url(/img/moon-stars.svg);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+}
+.light {
+  --text-color: black;
+  --fundo-: url(/img/bg-azul.jpg.jpg);
+  --stroke-color: black;
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.02);
+  --switch-bg-url: url(/img/sun.svg);
+  --span-border-color: ;
+}
+body {
+  /*
+
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  /*background: color ou image repeat position /size;
+  Sempre que usamos o size precisamos adicionar a "/"
+  Isto se chama atalho ou short range
+  */
+  background: var(--fundo-) no-repeat top center/cover;
+}
+
+/* "*" "asterisco" é o seletor universal*/
+body * {
+  color: var(--text-color);
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+}
+#container {
+  height: 712px;
+  width: 360px;
+  margin: auto;
+  padding-top: 56px;
+}
+
+#profile {
+  text-align: center;
+  gap: 8px;
+}
+
+/*Profile*/
+
+#profile img {
+  width: 150px;
+  margin: center;
+}
+#profile p {
+  font-weight: 500;
+  line-height: 70px;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/*swicth*/
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button {
+  height: 32px;
+  width: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  width: 64px;
+  height: 24px;
+  /*--surface-color*/
+  background: var(--surface-color);
+  backdrop-filter: var(--stroke-color);
+  display: block;
+  border-radius: 9999px;
+  border: var(--span-border-color) 1px solid;
+}
+
+/* links*/
+ul {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Colocar espaço entre os elementos*/
+  font-weight: 500;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center; /*Peguei o conteudo e o coloquei no centro*/
+
+  align-items: center; /*Posicionar os itens na linha*/
+  padding: 16px 24px;
+  background: var(
+    --surface-color
+  ); /* Cores - red, green, blue, alpha(transparencia)*/
+  border: solid 1px var(--stroke-color);
+  border-radius: 10px 10px 10px 10px; /*ARREDONDAMENTO DE BORDA*/
+  backdrop-filter: blur(4px); /* Embaçado*/
+  text-decoration: none; /*para tirar os efeitos da fonte*/
+  transition: background 0.3s;
+  transition: color 0.3s;
+}
+
+/*pseudo-seletor - Muda o botão enquanto passamos o mouse em cima*/
+ul li a:hover {
+  background: var(
+    --surface-color-hover
+  ); /* Cores - red, green, blue, alpha(transparencia)*/
+  border: solid 1.5px rgba(255, 225, 255, 0.5);
+  color: black;
+}
+/* Links sociais */
+#icon {
+  display: flex;
+  padding: 16px 0;
+  justify-content: center;
+  font-size: 24px;
+  transition: backgroud 0.2s;
+  transition: color 0.2s;
+}
+
+#icon a {
+  padding: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+#icon a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+}
