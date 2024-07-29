@@ -51,8 +51,9 @@ body * {
   font-family: "Open Sans", sans-serif;
 }
 #container {
-  height: 100%;
-  width: 360px;
+  height: 712px;
+  width: 100%;
+  max-width: 588px;
   margin: auto;
   padding-top: 56px;
 }
