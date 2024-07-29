@@ -51,7 +51,7 @@ body * {
   font-family: "Open Sans", sans-serif;
 }
 #container {
-  height: 712px;
+  height: 100%;
   width: 360px;
   margin: auto;
   padding-top: 56px;
