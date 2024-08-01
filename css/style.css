@@ -9,23 +9,23 @@ Quando ja tem uma medida precisamos "resetar" as medidas do navegador, fazendo u
 
 :root {
   --text-color: white;
-  --fundo-: url(/img/Background.png);
+  --fundo-: url("../img/Background.png"); /* Caminho relativo corrigido */
   --stroke-color: rgba(255, 255, 255, 0.5;);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(225, 225, 225, 0.05);
-  --switch-bg-url: url(/img/moon-stars.svg);
+  --switch-bg-url: url("../img/moon-stars.svg");
   --surface-color: rgba(255, 255, 255, 0.1);
   --stroke-color: rgba(255, 255, 255, 0.5);
 }
 .light {
   --text-color: black;
-  --fundo-: url(/img/bg-azul.jpg.jpg);
+  --fundo-: url("../img/bg-azul.jpg");
   --stroke-color: black;
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.02);
-  --switch-bg-url: url(/img/sun.svg);
+  --switch-bg-url: url("../img/sun.svg");
   --span-border-color: ;
 }
 body {
